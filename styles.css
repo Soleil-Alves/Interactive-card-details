@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* container and card image positioning */
+body {
+    font-family: "Space Grotesk", sans-serif;
+}
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ front card ~~~~~~~~~~~~~~~~~~~~~~~~*/
+.front-card-img {
+    position: absolute; 
+    z-index: 2; 
+    top: 130px; 
+    left: 170px; 
+}
+.logo-card {
+    position: absolute;
+    z-index: 3;
+    left: 200px;
+    top: 160px;
+}
+.cnumber-display {
+    position: absolute;
+    z-index: 3;
+    top: 260px; 
+    left: 220px;
+    font-size: 30px;
+    color: white;
+}
+.cname-display {
+    position: absolute;
+    z-index: 3;
+    top: 340px; 
+    left: 200px;
+    font-size: 18px;
+    color: white;
+}
+.cmonth-display {
+    position: absolute;
+    z-index: 3;
+    top: 340px; 
+    left: 32rem;
+    font-size: 18px;
+    color: white;
+}
+.cyear-display {
+    position: absolute;
+    z-index: 3;
+    top: 340px; 
+    left: 34rem;
+    font-size: 18px;
+    color: white;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ back card ~~~~~~~~~~~~~~~~~~~~~~~~*/ 
+
+.back-card-img {
+    position: absolute;
+    z-index: 2; 
+    top: 400px; 
+    left: 280px; 
+}
+.cvc-display {
+    position: absolute;
+    z-index: 3;
+    top: 510px; 
+    left: 39rem;
+    font-size: 20px;
+    color: black;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ form body ~~~~~~~~~~~~~~~~~~~~~~~~*/ 
+
+.form-section { 
+    position: relative;
+    top: 280px;
+    right: 300px;
+    text-transform: uppercase;
+}
+.completed {
+    position:absolute;
+    top: 280px;
+    right: 300px;
+    text-align: center;
+    display: none;
+}
+
+#emonth {
+    width: 80px;
+}
+#eyear {
+    width: 80px;
+}
+
+
+.completed button {
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border-radius: 5px;
+    font-family: "Space Grotesk", sans-serif;
+    border: 0;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+}
+.completed button:active {
+    background-color: purple;
+}
+
+
+label, input {
+    display: block;
+}
+label {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: hsl(278, 68%, 11%);
+    font-size: 15px;
+}
+input {
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: hsl(270, 3%, 87%);
+}
+
+.input-control.success input {
+    border-color: green;
+}
+
+.input-control.error input {
+    border-color: red;
+}
+
+.form-submit {
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    width: 280px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0;
+    display: block;
+    margin-top: 25px;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: pointer;
+}
+
+.form-submit:active {
+    background-color: purple;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ body images ~~~~~~~~~~~~~~~~~~~~~~~~*/
+.main-img {
+    position: fixed;
+}
+
+.mob-img {
+    display: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ Responsividade ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+@media(max-width: 1255px) {
+
+    .main-img {
+        display: none;
+    }
+    .mob-img {
+        display: block;
+        width: 100%;
+        height: 320px;
+        position: absolute;
+    }
+
+    .front-card-img {
+        position: absolute; 
+        z-index: 3; 
+        width: 400px;
+        top: 150px;
+        left: 30px; 
+    }
+    .logo-card {
+        position: absolute;
+        z-index: 4;
+        width: 70px;
+        top: 170px;
+        left: 70px;
+    }
+    .cnumber-display {
+        position: absolute;
+        z-index: 3;
+        font-size: 18px;
+        top: 270px;
+        left: 120px;
+    }
+    .cname-display {
+        position: absolute;
+        z-index: 3;
+        font-size: 18px;
+        top: 325px;
+        left: 60px;
+    }
+    .cmonth-display {
+        position: absolute;
+         z-index: 3;
+         top: 325px; 
+         left: 325px;
+         font-size: 18px;
+     }
+ 
+    .cyear-display {
+       position: absolute;
+        z-index: 3;
+        top: 325px; 
+        left: 355px;
+        font-size: 18px;
+    }
+
+    .back-card-img {
+        position: absolute;
+        z-index: 2; 
+        width: 400px;
+        top: 23px; 
+        left: 140px; 
+    }
+    .cvc-display {
+        position: absolute;
+        z-index: 4;
+        top: 118px;
+        left: 450px;
+        color: black;
+    }
+
+    .form-section {
+        top: 400px;
+        left: 0px;
+        margin: auto;
+    }
+
+    .completed {
+        position:absolute;
+        top: 400px;
+        left: 280px;
+        text-align: center;
+    }
+    label {
+        color:hsl(278, 68%, 11%);
+    }
+    .form-submit{
+        margin-bottom: 30px;
+        background-color: hsl(278, 68%, 11%);
+    }
+}

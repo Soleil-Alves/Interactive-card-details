@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <img src="images/bg-main-desktop.png" alt="" class="main-img">
+  <img src="images/bg-main-mobile.png" alt="" class="mob-img">
+
+  <div class="main-container">
+  <section class="card-display">
+    <div class="front-card">
+      <img src="images/bg-card-front.png" alt="" class="front-card-img">
+      <img src="images/card-logo.svg" alt="" class="logo-card">
+
+      <p class="cnumber-display" id="cnumberDisplay">0000 0000 0000 0000</p>
+      <p class="cname-display" id="cnameDisplay">Jane Appleseed</p>
+      <p class="cmonth-display" id="cmonthDisplay">00</p>
+      <p class="cyear-display" id="cyearDisplay">0000</p>
+    </div>
+
+    <div class="back-card">
+      <img src="images/bg-card-back.png" alt="" class="back-card-img">
+
+      <p class="cvc-display" id="cvcDisplay">000</p>
+    </div>
+  </section>
+
+  <section class="completed">
+    <img src="images/icon-complete.svg" alt="congrats-icon">
+    <h2>THANK YOU!</h2>
+    <p>We've added your card details</p>
+    <button>Continue</button>
+  </section>
+
+
+  <section class="form-section">
+  <div class="form-items">
+  <form id="form">
+      <div class="input-control">
+        <label for="cname">Cardholder name</label>
+        <input type="text" id="cname" name="cname" maxlength="26" placeholder="e.g. Jane Appleseed">
+        <div class="error"></div>
+      </div>
+
+      <div class="input-control">
+        <label for="cnumber">Card Number</label>
+        <input type="tel" id="cnumber" name="cnumber" pattern="\d*" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+        <div class="error"></div>
+      </div>
+
+      <div class="input-control">
+        <label for="expire">Exp. Date (MM/YY)</label>
+        <input type="tel" id="emonth" name="expire" pattern="\d*" maxlength="2" placeholder="MM">
+        <div class="error"></div>
+      </div>
+
+      <div class="input-control">
+        <input type="tel" id="eyear" name="expire" pattern="\d*" maxlength="4" placeholder="YY">
+        <div class="error"></div>
+      </div>
+
+      <div class="input-control">
+        <label for="cvcnumber">CVC</label>
+        <input type="tel" id="cvcnumber" name="cvcnumber" pattern="\d*" maxlength="3" placeholder="e.g. 123" >
+        <div class="error"></div>
+    </div>
+    </div>
+    <input type="submit" id="button-submit" class="form-submit" value="Confirm">
+  </form>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
